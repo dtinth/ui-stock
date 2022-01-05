@@ -1,8 +1,6 @@
-# TypeScript Library Template
+# ui-stock
 
-This repository is generated automatically by [dtinth/create-typescript-library-template](https://github.com/dtinth/create-typescript-library-template). It uses the [Heft](https://rushstack.io/pages/heft/overview/) build toolchain.
-
-TODO: Add description of the library here.
+Strict subset of `vscode.window` API for rapid prototyping web apps. (Interface only; no implementation)
 
 ## API
 
