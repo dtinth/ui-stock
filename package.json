@@ -1,9 +1,9 @@
 {
-  "name": "fresh-library",
+  "name": "ui-stock",
   "version": "0.0.1-0",
   "main": "./lib-commonjs/index.js",
   "module": "./lib/index.js",
-  "types": "./lib/fresh-library.d.ts",
+  "types": "./lib/ui-stock.d.ts",
   "files": [
     "src",
     "lib",
