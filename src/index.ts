@@ -43,43 +43,74 @@ export interface IStock {
     task: (progress: IProgress, token?: ICancellationToken) => PromiseLike<R>,
   ): PromiseLike<R>
 }
+
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#MessageItem
+ */
 export interface IMessageItem {
   title: string
 }
+
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#MessageOptions
+ */
 export interface IMessageOptions {
   modal?: boolean
   detail?: string
 }
 
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#QuickPickItem
+ */
 export interface IQuickPickItem {
   label: string
 }
 
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions
+ */
 export interface IQuickPickOptions {
   title?: string
   placeHolder?: string
 }
 
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#InputBoxOptions
+ */
 export interface IInputBoxOptions {
   title?: string
   placeHolder?: string
   prompt?: string
 }
 
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#ProgressOptions
+ */
 export interface IProgressOptions {
   title?: string
   cancellable?: boolean
 }
 
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#Progress
+ */
 export interface IProgress {
   report(value: { increment: number; message: string }): void
 }
 
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#CancellationToken
+ * @public
+ */
 export interface ICancellationToken {
   isCancellationRequested: boolean
   onCancellationRequested(listener: () => void): IDisposable
 }
 
+/**
+ * See: https://code.visualstudio.com/api/references/vscode-api#Disposable
+ * @public
+ */
 export interface IDisposable {
   dispose(): void
 }
