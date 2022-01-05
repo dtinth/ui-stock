@@ -5,6 +5,7 @@ specifiers:
   '@rushstack/heft': ^0.44.1
   '@rushstack/heft-web-rig': ^0.7.1
   '@types/heft-jest': ^1.0.2
+  '@types/vscode': ^1.63.1
   prettier: ^2.5.1
 
 devDependencies:
@@ -12,6 +13,7 @@ devDependencies:
   '@rushstack/heft': 0.44.1
   '@rushstack/heft-web-rig': 0.7.1_@rushstack+heft@0.44.1
   '@types/heft-jest': 1.0.2
+  '@types/vscode': 1.63.1
   prettier: 2.5.1
 
 packages:
@@ -1018,6 +1020,10 @@ packages:
 
   /@types/tapable/1.0.6:
     resolution: {integrity: sha512-W+bw9ds02rAQaMvaLYxAbJ6cvguW/iJXNT6lTssS1ps6QdrMKttqEAMEG/b5CR8TZl3/L7/lH0ZV5nNR1LXikA==}
+    dev: true
+
+  /@types/vscode/1.63.1:
+    resolution: {integrity: sha512-Z+ZqjRcnGfHP86dvx/BtSwWyZPKQ/LBdmAVImY82TphyjOw2KgTKcp7Nx92oNwCTsHzlshwexAG/WiY2JuUm3g==}
     dev: true
 
   /@types/yargs-parser/20.2.1:

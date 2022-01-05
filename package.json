@@ -21,6 +21,7 @@
     "@rushstack/heft": "^0.44.1",
     "@rushstack/heft-web-rig": "^0.7.1",
     "@types/heft-jest": "^1.0.2",
+    "@types/vscode": "^1.63.1",
     "prettier": "^2.5.1"
   }
 }
