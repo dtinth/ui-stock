@@ -8,5 +8,5 @@
 
 |  Package | Description |
 |  --- | --- |
-|  [fresh-library](./fresh-library.md) | TODO |
+|  [ui-stock](./ui-stock.md) | TODO |
 
