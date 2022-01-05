@@ -4,9 +4,73 @@
 
 ```ts
 
+// @public (undocumented)
+export interface IInputBoxOptions {
+    // (undocumented)
+    placeHolder?: string;
+    // (undocumented)
+    prompt?: string;
+    // (undocumented)
+    title?: string;
+}
+
+// @public (undocumented)
+export interface IMessageItem {
+    // (undocumented)
+    title: string;
+}
+
+// @public (undocumented)
+export interface IMessageOptions {
+    // (undocumented)
+    detail?: string;
+    // (undocumented)
+    modal?: boolean;
+}
+
+// @public (undocumented)
+export interface IProgress {
+    // (undocumented)
+    report(value: {
+        increment: number;
+        message: string;
+    }): void;
+}
+
+// @public (undocumented)
+export interface IProgressOptions {
+    // (undocumented)
+    title?: string;
+}
+
+// @public (undocumented)
+export interface IQuickPickItem {
+    // (undocumented)
+    label: string;
+}
+
+// @public (undocumented)
+export interface IQuickPickOptions {
+    // (undocumented)
+    placeHolder?: string;
+    // (undocumented)
+    title?: string;
+}
+
 // @public
-export class FreshLibrary {
-    add(a: number, b: number): number;
+export interface IStock {
+    // (undocumented)
+    showErrorMessage<T extends IMessageItem>(message: string, options: IMessageOptions, ...items: T[]): PromiseLike<T | undefined>;
+    // (undocumented)
+    showInformationMessage<T extends IMessageItem>(message: string, options: IMessageOptions, ...items: T[]): PromiseLike<T | undefined>;
+    // (undocumented)
+    showInputBox(options: IInputBoxOptions): PromiseLike<string | undefined>;
+    // (undocumented)
+    showQuickPick<T extends IQuickPickItem>(items: readonly T[], options: IQuickPickOptions): PromiseLike<T | undefined>;
+    // (undocumented)
+    showWarningMessage<T extends IMessageItem>(message: string, options: IMessageOptions, ...items: T[]): PromiseLike<T | undefined>;
+    // (undocumented)
+    withProgress<R>(options: IProgressOptions, task: (progress: IProgress) => PromiseLike<R>): PromiseLike<R>;
 }
 
 ```

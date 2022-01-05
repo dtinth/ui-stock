@@ -6,9 +6,16 @@
 
 TODO
 
-## Classes
+## Interfaces
 
-|  Class | Description |
+|  Interface | Description |
 |  --- | --- |
-|  [FreshLibrary](./fresh-library.freshlibrary.md) | TODO |
+|  [IInputBoxOptions](./fresh-library.iinputboxoptions.md) |  |
+|  [IMessageItem](./fresh-library.imessageitem.md) |  |
+|  [IMessageOptions](./fresh-library.imessageoptions.md) |  |
+|  [IProgress](./fresh-library.iprogress.md) |  |
+|  [IProgressOptions](./fresh-library.iprogressoptions.md) |  |
+|  [IQuickPickItem](./fresh-library.iquickpickitem.md) |  |
+|  [IQuickPickOptions](./fresh-library.iquickpickoptions.md) |  |
+|  [IStock](./fresh-library.istock.md) | The interface of UI stock that an implementation should conform. This is a strict subset of the <code>vscode.window</code> interface. |
 
