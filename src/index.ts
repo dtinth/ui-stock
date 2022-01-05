@@ -30,13 +30,17 @@ export interface IStock {
   showQuickPick<T extends IQuickPickItem>(
     items: readonly T[],
     options: IQuickPickOptions,
+    token?: ICancellationToken,
   ): PromiseLike<T | undefined>
 
-  showInputBox(options: IInputBoxOptions): PromiseLike<string | undefined>
+  showInputBox(
+    options: IInputBoxOptions,
+    token?: ICancellationToken,
+  ): PromiseLike<string | undefined>
 
   withProgress<R>(
     options: IProgressOptions,
-    task: (progress: IProgress) => PromiseLike<R>,
+    task: (progress: IProgress, token?: ICancellationToken) => PromiseLike<R>,
   ): PromiseLike<R>
 }
 export interface IMessageItem {
@@ -64,8 +68,18 @@ export interface IInputBoxOptions {
 
 export interface IProgressOptions {
   title?: string
+  cancellable?: boolean
 }
 
 export interface IProgress {
   report(value: { increment: number; message: string }): void
+}
+
+export interface ICancellationToken {
+  isCancellationRequested: boolean
+  onCancellationRequested(listener: () => void): IDisposable
+}
+
+export interface IDisposable {
+  dispose(): void
 }
