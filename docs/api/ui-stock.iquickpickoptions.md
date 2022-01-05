@@ -4,6 +4,8 @@
 
 ## IQuickPickOptions interface
 
+See: https://code.visualstudio.com/api/references/vscode-api\#QuickPickOptions
+
 <b>Signature:</b>
 
 ```typescript

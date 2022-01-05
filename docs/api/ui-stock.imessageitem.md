@@ -4,6 +4,8 @@
 
 ## IMessageItem interface
 
+See: https://code.visualstudio.com/api/references/vscode-api\#MessageItem
+
 <b>Signature:</b>
 
 ```typescript

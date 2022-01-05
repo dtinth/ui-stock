@@ -4,7 +4,21 @@
 
 ```ts
 
-// @public (undocumented)
+// @public
+export interface ICancellationToken {
+    // (undocumented)
+    isCancellationRequested: boolean;
+    // (undocumented)
+    onCancellationRequested(listener: () => void): IDisposable;
+}
+
+// @public
+export interface IDisposable {
+    // (undocumented)
+    dispose(): void;
+}
+
+// @public
 export interface IInputBoxOptions {
     // (undocumented)
     placeHolder?: string;
@@ -14,13 +28,13 @@ export interface IInputBoxOptions {
     title?: string;
 }
 
-// @public (undocumented)
+// @public
 export interface IMessageItem {
     // (undocumented)
     title: string;
 }
 
-// @public (undocumented)
+// @public
 export interface IMessageOptions {
     // (undocumented)
     detail?: string;
@@ -28,7 +42,7 @@ export interface IMessageOptions {
     modal?: boolean;
 }
 
-// @public (undocumented)
+// @public
 export interface IProgress {
     // (undocumented)
     report(value: {
@@ -37,19 +51,21 @@ export interface IProgress {
     }): void;
 }
 
-// @public (undocumented)
+// @public
 export interface IProgressOptions {
+    // (undocumented)
+    cancellable?: boolean;
     // (undocumented)
     title?: string;
 }
 
-// @public (undocumented)
+// @public
 export interface IQuickPickItem {
     // (undocumented)
     label: string;
 }
 
-// @public (undocumented)
+// @public
 export interface IQuickPickOptions {
     // (undocumented)
     placeHolder?: string;
@@ -64,13 +80,13 @@ export interface IStock {
     // (undocumented)
     showInformationMessage<T extends IMessageItem>(message: string, options: IMessageOptions, ...items: T[]): PromiseLike<T | undefined>;
     // (undocumented)
-    showInputBox(options: IInputBoxOptions): PromiseLike<string | undefined>;
+    showInputBox(options: IInputBoxOptions, token?: ICancellationToken): PromiseLike<string | undefined>;
     // (undocumented)
-    showQuickPick<T extends IQuickPickItem>(items: readonly T[], options: IQuickPickOptions): PromiseLike<T | undefined>;
+    showQuickPick<T extends IQuickPickItem>(items: readonly T[], options: IQuickPickOptions, token?: ICancellationToken): PromiseLike<T | undefined>;
     // (undocumented)
     showWarningMessage<T extends IMessageItem>(message: string, options: IMessageOptions, ...items: T[]): PromiseLike<T | undefined>;
     // (undocumented)
-    withProgress<R>(options: IProgressOptions, task: (progress: IProgress) => PromiseLike<R>): PromiseLike<R>;
+    withProgress<R>(options: IProgressOptions, task: (progress: IProgress, token?: ICancellationToken) => PromiseLike<R>): PromiseLike<R>;
 }
 
 ```

@@ -4,6 +4,8 @@
 
 ## IInputBoxOptions interface
 
+See: https://code.visualstudio.com/api/references/vscode-api\#InputBoxOptions
+
 <b>Signature:</b>
 
 ```typescript

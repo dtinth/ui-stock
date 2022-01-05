@@ -4,6 +4,8 @@
 
 ## IProgress interface
 
+See: https://code.visualstudio.com/api/references/vscode-api\#Progress
+
 <b>Signature:</b>
 
 ```typescript

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-showInputBox(options: IInputBoxOptions): PromiseLike<string | undefined>;
+showInputBox(options: IInputBoxOptions, token?: ICancellationToken): PromiseLike<string | undefined>;
 ```
 
 ## Parameters
@@ -15,6 +15,7 @@ showInputBox(options: IInputBoxOptions): PromiseLike<string | undefined>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  options | [IInputBoxOptions](./ui-stock.iinputboxoptions.md) |  |
+|  token | [ICancellationToken](./ui-stock.icancellationtoken.md) |  |
 
 <b>Returns:</b>
 

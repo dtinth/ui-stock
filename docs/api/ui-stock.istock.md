@@ -18,8 +18,8 @@ export interface IStock
 |  --- | --- |
 |  [showErrorMessage(message, options, items)](./ui-stock.istock.showerrormessage.md) |  |
 |  [showInformationMessage(message, options, items)](./ui-stock.istock.showinformationmessage.md) |  |
-|  [showInputBox(options)](./ui-stock.istock.showinputbox.md) |  |
-|  [showQuickPick(items, options)](./ui-stock.istock.showquickpick.md) |  |
+|  [showInputBox(options, token)](./ui-stock.istock.showinputbox.md) |  |
+|  [showQuickPick(items, options, token)](./ui-stock.istock.showquickpick.md) |  |
 |  [showWarningMessage(message, options, items)](./ui-stock.istock.showwarningmessage.md) |  |
 |  [withProgress(options, task)](./ui-stock.istock.withprogress.md) |  |
 

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-withProgress<R>(options: IProgressOptions, task: (progress: IProgress) => PromiseLike<R>): PromiseLike<R>;
+withProgress<R>(options: IProgressOptions, task: (progress: IProgress, token?: ICancellationToken) => PromiseLike<R>): PromiseLike<R>;
 ```
 
 ## Parameters
@@ -15,7 +15,7 @@ withProgress<R>(options: IProgressOptions, task: (progress: IProgress) => Promis
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  options | [IProgressOptions](./ui-stock.iprogressoptions.md) |  |
-|  task | (progress: [IProgress](./ui-stock.iprogress.md)<!-- -->) =&gt; PromiseLike&lt;R&gt; |  |
+|  task | (progress: [IProgress](./ui-stock.iprogress.md)<!-- -->, token?: [ICancellationToken](./ui-stock.icancellationtoken.md)<!-- -->) =&gt; PromiseLike&lt;R&gt; |  |
 
 <b>Returns:</b>
 

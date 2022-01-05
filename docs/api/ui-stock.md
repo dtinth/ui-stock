@@ -10,12 +10,14 @@ TODO
 
 |  Interface | Description |
 |  --- | --- |
-|  [IInputBoxOptions](./ui-stock.iinputboxoptions.md) |  |
-|  [IMessageItem](./ui-stock.imessageitem.md) |  |
-|  [IMessageOptions](./ui-stock.imessageoptions.md) |  |
-|  [IProgress](./ui-stock.iprogress.md) |  |
-|  [IProgressOptions](./ui-stock.iprogressoptions.md) |  |
-|  [IQuickPickItem](./ui-stock.iquickpickitem.md) |  |
-|  [IQuickPickOptions](./ui-stock.iquickpickoptions.md) |  |
+|  [ICancellationToken](./ui-stock.icancellationtoken.md) | See: https://code.visualstudio.com/api/references/vscode-api\#CancellationToken |
+|  [IDisposable](./ui-stock.idisposable.md) | See: https://code.visualstudio.com/api/references/vscode-api\#Disposable |
+|  [IInputBoxOptions](./ui-stock.iinputboxoptions.md) | See: https://code.visualstudio.com/api/references/vscode-api\#InputBoxOptions |
+|  [IMessageItem](./ui-stock.imessageitem.md) | See: https://code.visualstudio.com/api/references/vscode-api\#MessageItem |
+|  [IMessageOptions](./ui-stock.imessageoptions.md) | See: https://code.visualstudio.com/api/references/vscode-api\#MessageOptions |
+|  [IProgress](./ui-stock.iprogress.md) | See: https://code.visualstudio.com/api/references/vscode-api\#Progress |
+|  [IProgressOptions](./ui-stock.iprogressoptions.md) | See: https://code.visualstudio.com/api/references/vscode-api\#ProgressOptions |
+|  [IQuickPickItem](./ui-stock.iquickpickitem.md) | See: https://code.visualstudio.com/api/references/vscode-api\#QuickPickItem |
+|  [IQuickPickOptions](./ui-stock.iquickpickoptions.md) | See: https://code.visualstudio.com/api/references/vscode-api\#QuickPickOptions |
 |  [IStock](./ui-stock.istock.md) | The interface of UI stock that an implementation should conform. This is a strict subset of the <code>vscode.window</code> interface. |
 

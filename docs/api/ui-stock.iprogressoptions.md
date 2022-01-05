@@ -4,6 +4,8 @@
 
 ## IProgressOptions interface
 
+See: https://code.visualstudio.com/api/references/vscode-api\#ProgressOptions
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,5 +16,6 @@ export interface IProgressOptions
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [cancellable?](./ui-stock.iprogressoptions.cancellable.md) | boolean | <i>(Optional)</i> |
 |  [title?](./ui-stock.iprogressoptions.title.md) | string | <i>(Optional)</i> |
 

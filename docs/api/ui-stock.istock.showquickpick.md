@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-showQuickPick<T extends IQuickPickItem>(items: readonly T[], options: IQuickPickOptions): PromiseLike<T | undefined>;
+showQuickPick<T extends IQuickPickItem>(items: readonly T[], options: IQuickPickOptions, token?: ICancellationToken): PromiseLike<T | undefined>;
 ```
 
 ## Parameters
@@ -16,6 +16,7 @@ showQuickPick<T extends IQuickPickItem>(items: readonly T[], options: IQuickPick
 |  --- | --- | --- |
 |  items | readonly T\[\] |  |
 |  options | [IQuickPickOptions](./ui-stock.iquickpickoptions.md) |  |
+|  token | [ICancellationToken](./ui-stock.icancellationtoken.md) |  |
 
 <b>Returns:</b>
 

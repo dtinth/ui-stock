@@ -4,6 +4,8 @@
 
 ## IMessageOptions interface
 
+See: https://code.visualstudio.com/api/references/vscode-api\#MessageOptions
+
 <b>Signature:</b>
 
 ```typescript
