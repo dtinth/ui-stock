@@ -1,5 +1,5 @@
 /**
- * TODO
+ * Strict subset of `vscode.window` API for rapidly prototyping web apps. (Interface only; no implementation)
  * @packageDocumentation
  */
 
@@ -8,53 +8,53 @@
  * This is a strict subset of the `vscode.window` interface.
  * @public
  */
-export interface IStock {
-  showInformationMessage<T extends IMessageItem>(
+export interface UIStock {
+  showInformationMessage<T extends MessageItem>(
     message: string,
-    options: IMessageOptions,
+    options: MessageOptions,
     ...items: T[]
   ): PromiseLike<T | undefined>
 
-  showWarningMessage<T extends IMessageItem>(
+  showWarningMessage<T extends MessageItem>(
     message: string,
-    options: IMessageOptions,
+    options: MessageOptions,
     ...items: T[]
   ): PromiseLike<T | undefined>
 
-  showErrorMessage<T extends IMessageItem>(
+  showErrorMessage<T extends MessageItem>(
     message: string,
-    options: IMessageOptions,
+    options: MessageOptions,
     ...items: T[]
   ): PromiseLike<T | undefined>
 
-  showQuickPick<T extends IQuickPickItem>(
+  showQuickPick<T extends QuickPickItem>(
     items: readonly T[],
-    options: IQuickPickOptions,
-    token?: ICancellationToken,
+    options: QuickPickOptions,
+    token?: CancellationToken,
   ): PromiseLike<T | undefined>
 
   showInputBox(
-    options: IInputBoxOptions,
-    token?: ICancellationToken,
+    options: InputBoxOptions,
+    token?: CancellationToken,
   ): PromiseLike<string | undefined>
 
   withProgress<R>(
-    options: IProgressOptions,
-    task: (progress: IProgress, token?: ICancellationToken) => PromiseLike<R>,
+    options: ProgressOptions,
+    task: (progress: Progress, token?: CancellationToken) => PromiseLike<R>,
   ): PromiseLike<R>
 }
 
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#MessageItem
  */
-export interface IMessageItem {
+export interface MessageItem {
   title: string
 }
 
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#MessageOptions
  */
-export interface IMessageOptions {
+export interface MessageOptions {
   modal?: boolean
   detail?: string
 }
@@ -62,14 +62,14 @@ export interface IMessageOptions {
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#QuickPickItem
  */
-export interface IQuickPickItem {
+export interface QuickPickItem {
   label: string
 }
 
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions
  */
-export interface IQuickPickOptions {
+export interface QuickPickOptions {
   title?: string
   placeHolder?: string
 }
@@ -77,7 +77,7 @@ export interface IQuickPickOptions {
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#InputBoxOptions
  */
-export interface IInputBoxOptions {
+export interface InputBoxOptions {
   title?: string
   placeHolder?: string
   prompt?: string
@@ -86,7 +86,7 @@ export interface IInputBoxOptions {
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#ProgressOptions
  */
-export interface IProgressOptions {
+export interface ProgressOptions {
   title?: string
   cancellable?: boolean
 }
@@ -94,7 +94,7 @@ export interface IProgressOptions {
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#Progress
  */
-export interface IProgress {
+export interface Progress {
   report(value: { increment: number; message: string }): void
 }
 
@@ -102,15 +102,15 @@ export interface IProgress {
  * See: https://code.visualstudio.com/api/references/vscode-api#CancellationToken
  * @public
  */
-export interface ICancellationToken {
+export interface CancellationToken {
   isCancellationRequested: boolean
-  onCancellationRequested(listener: () => void): IDisposable
+  onCancellationRequested(listener: () => void): Disposable
 }
 
 /**
  * See: https://code.visualstudio.com/api/references/vscode-api#Disposable
  * @public
  */
-export interface IDisposable {
+export interface Disposable {
   dispose(): void
 }

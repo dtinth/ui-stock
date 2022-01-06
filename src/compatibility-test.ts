@@ -1,5 +1,5 @@
 import vscode from 'vscode'
-import type { IStock } from '.'
+import type { UIStock } from '.'
 
-const stock: IStock = vscode.window
+const stock: UIStock = vscode.window
 void stock
