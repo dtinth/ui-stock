@@ -1,45 +1,66 @@
+# This file is automatically managed by <https://github.com/dtinth/jslibdevkit>.
+# Any manual changes to this file may be overwritten.
+
 name: CI
 on:
-  workflow_dispatch:
   push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - name: Install pnpm
-        run: npm install --global pnpm
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build the library
-        run: pnpm run build
-      - name: Generate API documentation
-        run: pnpm run docs
-      - name: Publish API report and documentation
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update generated files as of ${{ github.sha }}
-          file_pattern: docs/api etc
-      - name: Format code using Prettier
-        run: pnpx prettier --write .
-      - name: Update formatted code
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Format code using Prettier
-          file_pattern: .
   test:
+    name: Test
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: 14.x
-      - name: Install pnpm
-        run: npm install --global pnpm
-      - name: Install dependencies
-        run: pnpm install
-      - name: Run tests
+          fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2 # v2.0.1
+        with:
+          version: 6.26.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: pnpm
+      - name: Install dependencies and build
+        run: pnpm install --prefer-offline
+      - name: Test
         run: pnpm run test
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        if: ${{ secrets.SONAR_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  lint:
+    name: Lint
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2 # v2.0.1
+        with:
+          version: 6.26.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: pnpm
+      - name: Install dependencies and build
+        run: pnpm install --prefer-offline
+      - name: Lint
+        run: pnpm run format
+      - name: Lint
+        run: pnpm run api
+      - name: Stage changed files
+        run: git add --update
+      - name: Ensure no file is changed
+        uses: dtinth/patch-generator-action@v1

@@ -45,14 +45,16 @@ export interface UIStock {
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#MessageItem
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#MessageItem}
+ * @public
  */
 export interface MessageItem {
   title: string
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#MessageOptions
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#MessageOptions}
+ * @public
  */
 export interface MessageOptions {
   modal?: boolean
@@ -60,14 +62,16 @@ export interface MessageOptions {
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#QuickPickItem
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#QuickPickItem}
+ * @public
  */
 export interface QuickPickItem {
   label: string
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions}
+ * @public
  */
 export interface QuickPickOptions {
   title?: string
@@ -75,7 +79,8 @@ export interface QuickPickOptions {
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#InputBoxOptions
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#InputBoxOptions}
+ * @public
  */
 export interface InputBoxOptions {
   title?: string
@@ -84,7 +89,8 @@ export interface InputBoxOptions {
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#ProgressOptions
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#ProgressOptions}
+ * @public
  */
 export interface ProgressOptions {
   title?: string
@@ -92,14 +98,15 @@ export interface ProgressOptions {
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#Progress
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#Progress}
+ * @public
  */
 export interface Progress {
   report(value: { increment: number; message: string }): void
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#CancellationToken
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#CancellationToken}
  * @public
  */
 export interface CancellationToken {
@@ -108,7 +115,7 @@ export interface CancellationToken {
 }
 
 /**
- * See: https://code.visualstudio.com/api/references/vscode-api#Disposable
+ * See: {@link https://code.visualstudio.com/api/references/vscode-api#Disposable}
  * @public
  */
 export interface Disposable {

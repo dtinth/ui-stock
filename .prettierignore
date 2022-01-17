@@ -1,8 +1,7 @@
-/config/
 /dist/
-/docs/api/
 /etc/
-/lib-commonjs/
 /lib/
+/lib-commonjs/
 pnpm-lock.yaml
+CHANGELOG.md
 /temp/

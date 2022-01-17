@@ -1,9 +1,9 @@
 {
-  "name": "ui-stock",
+  "name": "@spacet.me/ui-stock",
   "version": "0.0.1-0",
   "main": "./lib-commonjs/index.js",
   "module": "./lib/index.js",
-  "types": "./lib/ui-stock.d.ts",
+  "types": "./dist/ui-stock.d.ts",
   "files": [
     "src",
     "lib",
@@ -13,15 +13,20 @@
   "scripts": {
     "build": "heft build",
     "docs": "api-documenter markdown --input temp --output docs/api",
-    "prepare": "heft build",
-    "test": "heft test"
+    "prepare": "heft build && ./scripts/generate-api-docs",
+    "test": "heft test",
+    "release": "release-it",
+    "format": "prettier --write .",
+    "api": "./scripts/generate-api-docs"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "^7.13.78",
-    "@rushstack/heft": "^0.44.1",
-    "@rushstack/heft-web-rig": "^0.7.1",
-    "@types/heft-jest": "^1.0.2",
+    "@rushstack/heft": "0.44.2",
+    "@rushstack/heft-web-rig": "0.7.2",
+    "@types/heft-jest": "1.0.2",
     "@types/vscode": "^1.63.1",
-    "prettier": "^2.5.1"
-  }
+    "prettier": "2.5.1",
+    "release-it": "15.0.0-esm.3",
+    "@spacet.me/news-fragments": "1.15.2-1"
+  },
+  "docModel": "./dist/ui-stock.api.json"
 }

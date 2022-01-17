@@ -1,6 +1,6 @@
-import type { IStock } from '.'
+import type { UIStock } from '.'
 
-const showMessage: IStock['showInformationMessage'] = async (
+const showMessage: UIStock['showInformationMessage'] = async (
   message,
   options,
   ...items
@@ -24,7 +24,7 @@ const showMessage: IStock['showInformationMessage'] = async (
   }
 }
 
-const stock: IStock = {
+const stock: UIStock = {
   showInformationMessage: showMessage,
   showWarningMessage: showMessage,
   showErrorMessage: showMessage,
