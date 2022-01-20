@@ -46,8 +46,8 @@ export interface MessageOptions {
 export interface Progress {
     // (undocumented)
     report(value: {
-        increment: number;
-        message: string;
+        increment?: number;
+        message?: string;
     }): void;
 }
 

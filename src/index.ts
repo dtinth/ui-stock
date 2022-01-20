@@ -102,7 +102,7 @@ export interface ProgressOptions {
  * @public
  */
 export interface Progress {
-  report(value: { increment: number; message: string }): void
+  report(value: { increment?: number; message?: string }): void
 }
 
 /**
