@@ -3,22 +3,9 @@
 ### Patch Changes
 
 - b9315e5: Update build toolchain
-  [//]: # (s-0.1.2)
 
-# [0.1.2] - (2022-01-20)
+## 0.1.2
 
-## Bugfixes
+### Bugfixes
 
 - Made message and increment optional.
-
-[//]: # 'e-0.1.2'
-[//]: # 's-0.1.1'
-
-# [0.1.1] - (2022-01-20)
-
-[//]: # 'e-0.1.1'
-[//]: # 's-0.1.0'
-
-# [0.1.0] - (2022-01-20)
-
-[//]: # 'e-0.1.0'
