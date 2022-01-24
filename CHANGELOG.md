@@ -1,24 +1,26 @@
+# Change log
 
-[//]: # (s-0.1.2)
-  
-# [0.1.2] - (2022-01-20)
+## 0.1.3
 
-## Bugfixes
-* Made message and increment optional.
+### Patch Changes
 
-[//]: # (e-0.1.2)
+- b9315e5: Update build toolchain
+- 5403e83: Fix scripts
 
+## 0.1.3-next.1
 
-[//]: # (s-0.1.1)
-  
-# [0.1.1] - (2022-01-20)
+### Patch Changes
 
-[//]: # (e-0.1.1)
+- Fix scripts
 
+## 0.1.3-next.0
 
-[//]: # (s-0.1.0)
-  
-# [0.1.0] - (2022-01-20)
+### Patch Changes
 
-[//]: # (e-0.1.0)
+- b9315e5: Update build toolchain
 
+## 0.1.2
+
+### Bugfixes
+
+- Made message and increment optional.
