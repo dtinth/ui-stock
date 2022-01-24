@@ -4,7 +4,5 @@
   "initialVersions": {
     "@spacet.me/ui-stock": "0.1.2"
   },
-  "changesets": [
-    "popular-schools-repeat"
-  ]
+  "changesets": []
 }
