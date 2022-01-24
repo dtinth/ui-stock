@@ -5,6 +5,7 @@
     "@spacet.me/ui-stock": "0.1.2"
   },
   "changesets": [
-    "popular-schools-repeat"
+    "popular-schools-repeat",
+    "rare-eels-hammer"
   ]
 }
