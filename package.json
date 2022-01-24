@@ -1,6 +1,6 @@
 {
   "name": "@spacet.me/ui-stock",
-  "version": "0.1.2",
+  "version": "0.1.3-next.0",
   "main": "./lib-commonjs/index.js",
   "module": "./lib/index.js",
   "types": "./dist/ui-stock.d.ts",
