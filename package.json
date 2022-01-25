@@ -21,11 +21,19 @@
   },
   "devDependencies": {
     "@rushstack/heft": "0.44.2",
-    "@rushstack/heft-web-rig": "0.7.2",
+    "@rushstack/heft-web-rig": "0.8.2",
     "@types/heft-jest": "1.0.2",
     "@types/vscode": "^1.63.1",
     "prettier": "2.5.1",
     "@changesets/cli": "2.20.0"
   },
-  "docModel": "./dist/ui-stock.api.json"
+  "docModel": "./dist/ui-stock.api.json",
+  "homepage": "https://github.com/dtinth/ui-stock#readme",
+  "bugs": {
+    "url": "https://github.com/dtinth/ui-stock#issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtinth/ui-stock.git"
+  }
 }
